@@ -30,9 +30,16 @@ class MyButton extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             // Icon(icon, size: 50, color: Colors.greenAccent),
-            SizedBox(height: 5),
+            // SizedBox(height: 5),
             Text(
               text,
+              style: TextStyle(
+                // color: Colors.grey,
+                fontSize: 10.0,
+                fontFamily: 'BeldaNorm',
+                //fontWeight: FontWeight.w600,
+                // height: 1.3,
+              ),
 
               // style: OnBoardingScreen.style,
             ),
@@ -46,36 +53,37 @@ class MyButton extends StatelessWidget {
           color: Colors.greenAccent,
         ),*/
         decoration: BoxDecoration(
-            shape: BoxShape.rectangle,
-            color: Colors.grey,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.grey,
-                  offset: Offset(0, 3),
-                  blurRadius: 15.0,
-                  spreadRadius: 1.0),
-              BoxShadow(
-                  color: Colors.white,
-                  offset: Offset(-4.0, -4.0),
-                  blurRadius: 15.0,
-                  spreadRadius: 1.0),
-            ],
-            gradient: LinearGradient(
+          shape: BoxShape.rectangle,
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+                color: Colors.grey[100],
+                offset: Offset(0, 3),
+                blurRadius: 15.0,
+                spreadRadius: 1.0),
+            BoxShadow(
+                color: Colors.white,
+                offset: Offset(-4.0, -4.0),
+                blurRadius: 15.0,
+                spreadRadius: 1.0),
+          ],
+          /* gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 colors: [
-                  Colors.white,
-                  Colors.white,
-                  Colors.white,
-                  Colors.white,
+                  Colors.grey,
+                  Colors.grey,
+                  Colors.grey,
+                  Colors.grey,
                 ],
                 stops: [
                   0.1,
                   0.3,
                   0.8,
                   1
-                ])),
+                ])*/
+        ),
       ),
     );
   }

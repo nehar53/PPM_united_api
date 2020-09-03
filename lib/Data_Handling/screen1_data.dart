@@ -45,3 +45,35 @@ class Confirm {
         "otp_code": otpCode,
       };
 }
+
+User userFromJson(String str) => User.fromJson(json.decode(str));
+
+String userToJson(User data) => json.encode(data.toJson());
+
+class User {
+  User({
+    this.status,
+    this.token,
+    this.message,
+    this.phoneNumber,
+  });
+
+  String status;
+  String token;
+  String message;
+  String phoneNumber;
+
+  factory User.fromJson(Map<String, dynamic> json) => User(
+        status: json["status"],
+        token: json["token"],
+        message: json["message"],
+        phoneNumber: json["phone_number"],
+      );
+
+  Map<String, dynamic> toJson() => {
+        "status": status,
+        "token": token,
+        "message": message,
+        "phone_number": phoneNumber,
+      };
+}

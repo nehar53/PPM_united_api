@@ -30,48 +30,64 @@ class _Auth_ScreenState extends State<Auth_Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFE7F0FF),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Text(
-            'Verify',
-            style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
-          ),
+          // Text(
+          //  'Verify',
+          //  style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+          // ),
           Center(
             child: Container(
-              padding: EdgeInsets.only(top: 20),
-              margin: EdgeInsets.only(top: 40),
+              padding: EdgeInsets.only(bottom: 4),
+              // margin: EdgeInsets.all(20),
               width: 300,
-              height: 250,
+              height: 350,
               decoration: kContainerdecoration,
               child: Padding(
-                padding: EdgeInsets.only(left: 20),
+                padding: EdgeInsets.all(10),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Your Phone!',
-                      style: ktextStyle,
+                      'Verify your number',
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                    SizedBox(
+                      height: 15,
                     ),
                     Text(
-                      'Phone Number',
-                      style: ktextStyle,
+                      'Please enter your mobile number to recieve a verification code.         \nCarrier ratesmay apply',
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                     Container(
                       padding: EdgeInsets.all(20),
                       child: InternationalPhoneInput(
-                          decoration:
-                              InputDecoration(hintText: 'Enter Phone No'),
+                          decoration: InputDecoration(hintText: ''),
                           onPhoneNumberChange: onPhoneNumberChange,
                           initialPhoneNumber: phone,
                           initialSelection: 'US',
                           enabledCountries: ['+91'],
                           showCountryCodes: true),
                     ),
-                    Center(
-                      child: Button(
-                        text: 'Continue',
+                    SizedBox(
+                      height: 60,
+                    ),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child:
+                          /*Padding(
+                        padding: const EdgeInsets.all(0),
+                        child:*/
+                          FlatButton(
                         onPressed: () async {
                           var response = await networking.otpsent(phone);
                           if (response == 200) {
@@ -83,20 +99,32 @@ class _Auth_ScreenState extends State<Auth_Screen> {
                                         )));
                           }
                         },
+                        child: Text(
+                          "Submit",
+                          style: TextStyle(
+                            color: Colors.white,
+
+                            fontSize: 20.0,
+                            fontFamily: 'SweetSansPro',
+                            fontWeight: FontWeight.w500,
+                            // height: 1.3,
+                          ),
+                        ),
+                        color: Colors.white.withOpacity(0.01),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
             ),
           ),
-          Row(
+          /*  Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text('Have an account already?'),
               SelectableText('Signin', onTap: () {}),
             ],
-          ),
+          ),*/
         ],
       ),
     );

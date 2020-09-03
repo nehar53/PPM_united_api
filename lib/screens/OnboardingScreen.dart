@@ -1,6 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_onboarding_ui/screens/Navbar.dart';
+import 'package:flutter_onboarding_ui/screens/auth_screen.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
 import 'Homepage.dart';
@@ -47,7 +49,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
         //First Page Starts from
         // color: Colors.grey[400],
         margin: EdgeInsets.only(
-            left: 5, top: 5, right: 5, bottom: 5), //change ur Box Size
+            left: 10, top: 10, right: 10, bottom: 10), //change ur Box Size
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
@@ -57,15 +59,15 @@ class _FirstScreenState extends State<OnBoardingScreen> {
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(
             begin: Alignment.topLeft,
-            end: Alignment.bottomLeft,
+            end: Alignment.bottomCenter,
             colors: [
-              Colors.greenAccent[400],
               Color(0xFF08B3E5),
+              Color(0xFF2AF598),
             ],
             /* stops: [
                 0.2,
                 0.1,
-                0.5,
+                0.10,
                 1,
                 0.1
               ]*/
@@ -113,7 +115,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                         color: Colors.white,
                         fontSize: 16.0,
                         fontFamily: 'SweetSansPro',
-                        fontWeight: FontWeight.w500,
+                        // fontWeight: FontWeight.w500,
                         // height: 1.3,
                       ),
                     ),
@@ -123,7 +125,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
             ])),
     Container(
         //Second Page Starts from Here
-        margin: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+        margin: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
@@ -134,16 +136,16 @@ class _FirstScreenState extends State<OnBoardingScreen> {
             begin: Alignment.topLeft,
             end: Alignment.bottomLeft,
             colors: [
-              //Colors.greenAccent[400],
-              // Colors.greenAccent[400],
-              Colors.greenAccent[400],
+              //Colors.(0xFF2AF598)[400],
+              // Colors.(0xFF2AF598)[400],
+              Color(0xFF2AF598),
               Color(0xFF08B3E5),
-              //Colors.greenAccent[400],
+              //Colors.(0xFF2AF598)[400],
             ],
             /* stops: [
                 0.2,
                 0.1,
-                0.5,
+                0.10,
                 1,
                 0.1
               ]*/
@@ -191,7 +193,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                         color: Colors.white,
                         fontSize: 16.0,
                         fontFamily: 'SweetSansPro',
-                        fontWeight: FontWeight.w500,
+                        //fontWeight: FontWeight.w500,
                         // height: 1.3,
                       ),
                     ),
@@ -201,7 +203,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
             ])),
     Container(
         //Third Page Starts from Here
-        margin: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+        margin: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
@@ -209,19 +211,21 @@ class _FirstScreenState extends State<OnBoardingScreen> {
           color: Color(0xFF5CBBEA),
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomLeft,
+            begin: Alignment.topRight,
+            end: Alignment.bottomRight,
             colors: [
-              //Colors.greenAccent[400],
-              // Colors.greenAccent[400],
-              Colors.greenAccent[400],
+              //Colors.(0xFF2AF598)[400],
+              // Colors.(0xFF2AF598)[400],
+
               Color(0xFF08B3E5),
-              //Colors.greenAccent[400],
+              Color(0xFF2AF598),
+
+              //Colors.(0xFF2AF598)[400],
             ],
             /* stops: [
                 0.2,
                 0.1,
-                0.5,
+                0.10,
                 1,
                 0.1
               ]*/
@@ -269,7 +273,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                         color: Colors.white,
                         fontSize: 16.0,
                         fontFamily: 'SweetSansPro',
-                        fontWeight: FontWeight.w500,
+                        //fontWeight: FontWeight.w500,
                         // height: 1.3,
                       ),
                     ),
@@ -279,7 +283,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
             ])),
     Container(
         //Fourth Page Starts from Here
-        margin: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+        margin: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
@@ -290,16 +294,16 @@ class _FirstScreenState extends State<OnBoardingScreen> {
             begin: Alignment.topLeft,
             end: Alignment.bottomLeft,
             colors: [
-              //Colors.greenAccent[400],
-              // Colors.greenAccent[400],
-              Colors.greenAccent[400],
+              //Colors.(0xFF2AF598)[400],
+              // Colors.(0xFF2AF598)[400],
+              Color(0xFF2AF598),
               Color(0xFF08B3E5),
-              //Colors.greenAccent[400],
+              //Colors.(0xFF2AF598)[400],
             ],
             /* stops: [
                 0.2,
                 0.1,
-                0.5,
+                0.10,
                 1,
                 0.1
               ]*/
@@ -348,10 +352,35 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                         color: Colors.white,
                         fontSize: 16.0,
                         fontFamily: 'SweetSansPro',
-                        fontWeight: FontWeight.w500,
+                        // fontWeight: FontWeight.w500,
                         // height: 1.3,
                       ),
                     ),
+                    /* SizedBox(
+                      height: 230,
+                    ),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      
+                        child: FlatButton(
+                          onPressed: () {
+                            // liquidController.animateToPage(
+                            //    page: pages.length - 1, duration: 500);
+                          },
+                          child: Text(
+                            "Next",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                              fontFamily: 'SweetSansPro',
+                              fontWeight: FontWeight.w500,
+                              // height: 1.3,
+                            ),
+                          ),
+                          color: Colors.white.withOpacity(0.01),
+                        ),
+                      ),
+                    ),*/
                   ],
                 ),
               ),
@@ -412,7 +441,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
             Align(
               alignment: Alignment.topRight,
               child: Padding(
-                padding: const EdgeInsets.all(5.0),
+                padding: const EdgeInsets.all(10.0),
                 child: FlatButton(
                   onPressed: () {
                     // liquidController.animateToPage(
@@ -421,7 +450,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (BuildContext context) => MyHomePage()));
+                            builder: (BuildContext context) => Auth_Screen()));
                   },
                   child: Text(
                     "Skip",
@@ -437,15 +466,12 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                 ),
               ),
             ),
-            /*  Align(
+            Align(
               alignment: Alignment.bottomRight,
               child: Padding(
-                padding: const EdgeInsets.all(5.0),
+                padding: const EdgeInsets.all(10.0),
                 child: FlatButton(
-                  onPressed: () {
-                    liquidController.jumpToPage(
-                        page: liquidController.currentPage + 1);
-                  },
+                  onPressed: () {},
                   child: Text(
                     "Next",
                     style: TextStyle(
@@ -459,7 +485,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                   color: Colors.white.withOpacity(0.01),
                 ),
               ),
-            )*/
+            )
           ],
         ),
       ),

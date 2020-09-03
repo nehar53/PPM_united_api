@@ -10,8 +10,8 @@ class ButtonTapped extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(4),
       child: Container(
-        height: 100,
-        width: 100,
+        height: 140,
+        width: 140,
         padding: EdgeInsets.all(5),
         child: Container(
           padding: EdgeInsets.all(10),
@@ -22,15 +22,21 @@ class ButtonTapped extends StatelessWidget {
             children: <Widget>[
               Image.asset(
                 image,
-                height: 10,
-                width: 20,
+                height: 50,
+                width: 50,
                 fit: BoxFit.cover,
               ),
               //SizedBox(height: 7),
               Text(
                 text,
-                // style: OnBoardingScreen.style,
-              ),
+                style: TextStyle(
+                  // color: Colors.white,
+                  fontSize: 10.0,
+                  fontFamily: 'BeldaNorm',
+                  //fontWeight: FontWeight.w600,
+                  // height: 1.3,
+                ),
+              )
             ],
           ),
           /* Icon(
@@ -40,7 +46,7 @@ class ButtonTapped extends StatelessWidget {
           ),*/
           decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.grey[300],
+              color: Colors.white,
               boxShadow: [
                 BoxShadow(
                     color: Colors.white,
