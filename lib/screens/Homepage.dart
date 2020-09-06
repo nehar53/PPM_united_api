@@ -3,13 +3,10 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_onboarding_ui/screens/slider.dart';
 
-import 'ButtonTapped.dart';
+import '../constants.dart';
 import 'Mybutton.dart';
-import 'lightclr.dart';
 
 class MyHomePage extends StatefulWidget {
-  //MyHomePage(Networking networking);
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -30,20 +27,20 @@ class _MyHomePageState extends State<MyHomePage> {
   // SET text HERE
   final String text1 = 'Electrical';
   final String text2 = 'Carpentery';
-  final String text3 = 'Cleaning Services';
-  final String text4 = 'Interior Designing';
-  final String text5 = 'Pest Control';
+  final String text3 = 'Cleaning \nServices';
+  final String text4 = 'Interior\n Designing';
+  final String text5 = 'Pest\n Control';
   final String text6 = 'Disinfection';
   final String text7 = 'Plumbing';
   final String text8 = 'Painting';
   final String text9 = 'A/C Services & Repair';
-  final String text10 = 'Home Automation';
-  final String text11 = 'Computer & Laptop ';
+  final String text10 = 'Home \nAutomation';
+  final String text11 = 'Computer &\n Laptop ';
   final String text12 = 'Event\nPlanner';
-  final String text13 = 'Finance &Tax Consultant';
+  final String text13 = 'Finance &Tax \nConsultant';
   final String text14 = 'Tech Services';
-  final String text15 = 'Car Cleaning';
-  final String text16 = 'Construction Services';
+  final String text15 = 'Car\n Cleaning';
+  final String text16 = 'Construction\nServices';
   //Set images HERE
   var image1 = 'assets/images/electrical.png';
 
@@ -69,393 +66,79 @@ class _MyHomePageState extends State<MyHomePage> {
   //
 
   //bool darkMode = false;
-
-  bool buttonPressed1 = false;
-  bool buttonPressed2 = false;
-  bool buttonPressed3 = false;
-  bool buttonPressed4 = false;
-  bool buttonPressed5 = false;
-  bool buttonPressed6 = false;
-  bool buttonPressed7 = false;
-  bool buttonPressed8 = false;
-  bool buttonPressed9 = false;
-  bool buttonPressed10 = false;
-  bool buttonPressed11 = false;
-  bool buttonPressed12 = false;
-  bool buttonPressed13 = false;
-  bool buttonPressed14 = false;
-  bool buttonPressed15 = false;
-  bool buttonPressed16 = false;
-
-  //_MyHomePageState(this.text);
-
-  //var text;
-
-  void _letsPress1() {
-    setState(() {
-      buttonPressed1 = true;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress2() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = true;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress3() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = true;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress4() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = true;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress5() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = true;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress6() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = true;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress7() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = true;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress8() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = true;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress9() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = true;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress10() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = true;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress11() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = true;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress12() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = true;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress13() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = true;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress14() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = true;
-      buttonPressed15 = false;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress15() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = true;
-      buttonPressed16 = false;
-    });
-  }
-
-  void _letsPress16() {
-    setState(() {
-      buttonPressed1 = false;
-      buttonPressed2 = false;
-      buttonPressed3 = false;
-      buttonPressed4 = false;
-      buttonPressed5 = false;
-      buttonPressed6 = false;
-      buttonPressed7 = false;
-      buttonPressed8 = false;
-      buttonPressed9 = false;
-      buttonPressed10 = false;
-      buttonPressed11 = false;
-      buttonPressed12 = false;
-      buttonPressed13 = false;
-      buttonPressed14 = false;
-      buttonPressed15 = false;
-      buttonPressed16 = true;
-    });
-  }
-
-  Widget _searchField() {
-    return Container(
-      height: 55,
-      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-      width: 312,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.all(Radius.circular(13)),
-        boxShadow: <BoxShadow>[
-          BoxShadow(
-            color: LightColor.grey.withOpacity(.3),
-            blurRadius: 15,
-            offset: Offset(5, 5),
-          )
+  Positioned _greetings() {
+    return Positioned(
+      left: 20,
+      bottom: 60,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(
+            'Hi Johnmiller',
+            style: TextStyle(
+              fontSize: 24,
+              fontFamily: 'BeldaNorm',
+              fontWeight: FontWeight.w500,
+              color: Colors.white,
+            ),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Text(
+            'Welcome to PPM United',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w300,
+              color: Colors.white,
+            ),
+          ),
         ],
       ),
-      child: TextField(
-        decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-          border: InputBorder.none,
-          icon: Icon(Icons.search, size: 30, color: LightColor.grey),
+    );
+  }
 
-          // hintStyle: TextStyles.body.subTitleColor,
-          suffixIcon: SizedBox(
-            width: 50,
-            child: Icon(Icons.list, size: 30, color: LightColor.grey),
-            // Icon(Icons.search, color: LightColor.purple)
-            //.alignCenter
-            // .ripple(() {}, borderRadius: BorderRadius.circular(13))
+  Container _backBgCover() {
+    return Container(
+      height: 135.0,
+      decoration: BoxDecoration(
+        gradient: purpleGradient,
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(40),
+          bottomRight: Radius.circular(40),
+        ),
+      ),
+    );
+  }
+
+  Positioned _moodsHolder() {
+    return Positioned(
+      bottom: -40,
+      child: Container(
+        height: 65.0,
+        width: 312,
+        padding: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            boxShadow: [
+              /* BoxShadow(
+                color: Colors.black12,
+                spreadRadius: 5.5,
+                blurRadius: 5.5,
+              )*/
+            ]),
+        child: TextField(
+          decoration: InputDecoration(
+            hintText: '',
+            contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+            border: InputBorder.none,
+            icon: Icon(Icons.search, size: 30, color: Colors.black),
+            suffixIcon: SizedBox(
+              width: 50,
+              child: Icon(Icons.list, size: 30, color: Colors.black),
+            ),
           ),
         ),
       ),
@@ -479,131 +162,35 @@ class _MyHomePageState extends State<MyHomePage> {
                     // body: Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
-                        Container(
-                          // alignment: Alignment.bottomCenter,
-                          //  height: 100,
-                          //  width:
-                          height: 155,
-                          width: 500,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.rectangle,
+                        Stack(
+                          alignment: AlignmentDirectional.topCenter,
+                          overflow: Overflow.visible,
+                          children: <Widget>[
+                            _backBgCover(),
 
-                            // color: Colors.white,
-
-                            borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(100),
-                                bottomRight: Radius.circular(100)),
-                            gradient: LinearGradient(
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomLeft,
-                                colors: [
-                                  Color(0xFF08B3E5),
-                                  Color(0xFF2AF598),
-                                  Color(0xFFE7F0FF),
-                                ],
-                                stops: [
-                                  0.1,
-                                  0.8,
-                                  0.1,
-                                  // 0.1,
-                                  // 0.8,
-                                  // 1,
-                                  // 0.8
-                                ]),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    "Hi,JOHn Miller",
-                                    // style: OnBoardingScreen.style,
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 24.0,
-                                      // fontFamily: 'SweetSansPro',
-                                      fontWeight: FontWeight.w600,
-                                      // height: 1.3,
-                                    ),
-                                  ),
-                                  /*  Image.asset(
-                        'assets/images/Untitled-1.png',
-                        height: 140,
-                        width: 140,
-                        fit: BoxFit.cover,
-                      ),*/
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    "Welcome to PPM united",
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 16.0,
-                                      fontFamily: 'BeldaNorm',
-                                      // fontWeight: FontWeight.w600,
-                                      // height: 1.3,
-                                    ),
-                                  ),
-                                ],
-                              ),
-
-                              /* Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[],
-                  ),*/
-
-                              SizedBox(
-                                height: 14,
-                              ),
-                              Container(
-                                // alignment: Alignment.bottomCenter,
-                                //  height: 100,
-                                // width: 1,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.rectangle,
-                                  // color: Colors.white,
-
-                                  borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(100),
-                                      bottomRight: Radius.circular(100)),
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: <Widget>[_searchField()],
-                                ),
-                              ),
-                              //  _getCustomAppBar1(),
-                            ],
-                          ),
+                            _greetings(),
+                            _moodsHolder(),
+                            // _searchField()
+                          ],
+                        ),
+                        SizedBox(
+                          height: 50,
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: 1, right: 2, left: 2, bottom: 1),
+                              top: 8, right: 25, left: 25, bottom: 8),
                           child: Row(
                             children: <Widget>[
                               Expanded(
                                 child: GestureDetector(
                                   // FIRST BUTTON
-
-                                  onTap: _letsPress1,
+                                  onTap: () {},
+                                  child: MyButton(
+                                    image: image1,
+                                    text: text1,
+                                  ),
+                                  /* onTap: _letsPress1,
                                   child: buttonPressed1
                                       ? ButtonTapped(
                                           image: image1,
@@ -612,201 +199,150 @@ class _MyHomePageState extends State<MyHomePage> {
                                       : MyButton(
                                           image: image1,
                                           text: text1,
-                                        ),
+                                        ),*/
                                 ),
                               ),
                               Expanded(
                                 child: GestureDetector(
                                   // SECOND BUTTON
-                                  onTap: _letsPress2,
-                                  child: buttonPressed2
-                                      ? ButtonTapped(
-                                          image: image2,
-                                          text: text2,
-                                        )
-                                      : MyButton(
-                                          image: image2,
-                                          text: text2,
-                                        ),
+                                  onTap: () {},
+                                  child: MyButton(
+                                    image: image2,
+                                    text: text2,
+                                  ),
                                 ),
                               ),
                               Expanded(
                                 child: GestureDetector(
                                     // THIRD BUTTON
-                                    onTap: _letsPress3,
-                                    child: buttonPressed3
-                                        ? ButtonTapped(
-                                            image: image3,
-                                            text: text3,
-                                          )
-                                        : MyButton(
-                                            image: image3,
-                                            text: text3,
-                                          )),
+                                    onTap: () {},
+                                    child: MyButton(
+                                      image: image3,
+                                      text: text3,
+                                    )),
                               ),
                               Expanded(
                                 child: GestureDetector(
                                     // FOURTH BUTTON
-                                    onTap: _letsPress4,
-                                    child: buttonPressed4
-                                        ? ButtonTapped(
-                                            image: image4,
-                                            text: text4,
-                                          )
-                                        : MyButton(
-                                            image: image4,
-                                            text: text4,
-                                          )),
+                                    onTap: () {},
+                                    child: MyButton(
+                                      image: image4,
+                                      text: text4,
+                                    )),
                               ),
                             ],
                           ),
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: 0, right: 2, left: 2, bottom: 1),
+                              top: 0, right: 25, left: 25, bottom: 8),
                           child: Row(
                             children: <Widget>[
                               Expanded(
                                 child: GestureDetector(
                                     // FIRST BUTTON
-                                    onTap: _letsPress5,
-                                    child: buttonPressed5
-                                        ? ButtonTapped(
-                                            image: image5,
-                                            text: text5,
-                                          )
-                                        : MyButton(image: image5, text: text5)),
+                                    onTap: () {},
+                                    child:
+                                        MyButton(image: image5, text: text5)),
                               ),
                               Expanded(
                                 child: GestureDetector(
                                     // SECOND BUTTON
-                                    onTap: _letsPress6,
-                                    child: buttonPressed6
-                                        ? ButtonTapped(
-                                            image: image6, text: text6)
-                                        : MyButton(image: image6, text: text6)),
+                                    onTap: () {},
+                                    child:
+                                        MyButton(image: image6, text: text6)),
                               ),
                               Expanded(
                                 child: GestureDetector(
                                     // THIRD BUTTON
-                                    onTap: _letsPress7,
-                                    child: buttonPressed7
-                                        ? ButtonTapped(
-                                            image: image7, text: text7)
-                                        : MyButton(image: image7, text: text7)),
+                                    onTap: () {},
+                                    child:
+                                        MyButton(image: image7, text: text7)),
                               ),
                               Expanded(
                                 child: GestureDetector(
                                     // FOURTH BUTTON
-                                    onTap: _letsPress8,
-                                    child: buttonPressed8
-                                        ? ButtonTapped(
-                                            image: image8, text: text8)
-                                        : MyButton(image: image8, text: text8)),
+                                    onTap: () {},
+                                    child:
+                                        MyButton(image: image8, text: text8)),
                               ),
                             ],
                           ),
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: 0, right: 2, left: 2, bottom: 1),
+                              top: 0, right: 25, left: 25, bottom: 8),
                           child: Row(
                             children: <Widget>[
                               Expanded(
                                 child: GestureDetector(
                                     // FIRST BUTTON
-                                    onTap: _letsPress9,
-                                    child: buttonPressed5
-                                        ? ButtonTapped(
-                                            image: image9, text: text9)
-                                        : MyButton(image: image9, text: text9)),
+                                    onTap: () {},
+                                    child:
+                                        MyButton(image: image9, text: text9)),
                               ),
                               Expanded(
                                 child: GestureDetector(
                                     // SECOND BUTTON
-                                    onTap: _letsPress10,
-                                    child: buttonPressed10
-                                        ? ButtonTapped(
-                                            image: image10, text: text10)
-                                        : MyButton(
-                                            image: image10, text: text10)),
+                                    onTap: () {},
+                                    child:
+                                        MyButton(image: image10, text: text10)),
                               ),
                               Expanded(
                                 child: GestureDetector(
                                     // THIRD BUTTON
-                                    onTap: _letsPress11,
-                                    child: buttonPressed10
-                                        ? ButtonTapped(
-                                            image: image11, text: text11)
-                                        : MyButton(
-                                            image: image11, text: text11)),
+                                    onTap: () {},
+                                    child:
+                                        MyButton(image: image11, text: text11)),
                               ),
                               Expanded(
                                 child: GestureDetector(
                                     // FOURTH BUTTON
-                                    onTap: _letsPress12,
-                                    child: buttonPressed12
-                                        ? ButtonTapped(
-                                            image: image12, text: text12)
-                                        : MyButton(
-                                            image: image12, text: text12)),
+                                    onTap: () {},
+                                    child:
+                                        MyButton(image: image12, text: text12)),
                               ),
                             ],
                           ),
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: 0, right: 2, left: 2, bottom: 1),
+                              top: 0, right: 25, left: 25, bottom: 8),
                           child: Row(
                             children: <Widget>[
                               Expanded(
                                 child: GestureDetector(
                                     // FIRST BUTTON
-                                    onTap: _letsPress13,
-                                    child: buttonPressed13
-                                        ? ButtonTapped(
-                                            image: image13,
-                                            text: text13,
-                                          )
-                                        : MyButton(
-                                            image: image13,
-                                            text: text13,
-                                          )),
+                                    onTap: () {},
+                                    child: MyButton(
+                                      image: image13,
+                                      text: text13,
+                                    )),
                               ),
                               Expanded(
                                 child: GestureDetector(
                                     // SECOND BUTTON
-                                    onTap: _letsPress14,
-                                    child: buttonPressed14
-                                        ? ButtonTapped(
-                                            image: image14, text: text14)
-                                        : MyButton(
-                                            image: image14, text: text14)),
+                                    onTap: () {},
+                                    child:
+                                        MyButton(image: image14, text: text14)),
                               ),
                               Expanded(
                                 child: GestureDetector(
                                     // THIRD BUTTON
-                                    onTap: _letsPress15,
-                                    child: buttonPressed15
-                                        ? ButtonTapped(
-                                            image: image15, text: text15)
-                                        : MyButton(
-                                            image: image15, text: text15)),
+                                    onTap: () {},
+                                    child:
+                                        MyButton(image: image15, text: text15)),
                               ),
                               Expanded(
                                 child: GestureDetector(
                                     // FOURTH BUTTON
-                                    onTap: _letsPress16,
-                                    child: buttonPressed16
-                                        ? ButtonTapped(
-                                            image: image16, text: text16)
-                                        : MyButton(
-                                            image: image16, text: text16)),
+                                    onTap: () {},
+                                    child:
+                                        MyButton(image: image16, text: text16)),
                               ),
                             ],
                           ),
                         ),
-
                         CarouselSlider(
                           height: 100.0,
                           autoPlay: true,
@@ -835,23 +371,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             });
                           }).toList(),
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: map<Widget>(cardList, (index, url) {
-                            return Container(
-                              width: 10.0,
-                              height: 10.0,
-                              margin: EdgeInsets.symmetric(
-                                  vertical: 10.0, horizontal: 2.0),
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: _currentIndex == index
-                                    ? Colors.blueAccent
-                                    : Colors.grey,
-                              ),
-                            );
-                          }),
-                        ), // CrouselSilder()
                       ],
                     ),
                   ),

@@ -13,15 +13,15 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(5),
+      padding: EdgeInsets.all(8),
       child: Container(
-        height: 100,
-        width: 100,
-        padding: EdgeInsets.all(5),
+        height: 80,
+        width: 80,
+        // padding: EdgeInsets.all(2),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset(
               image,
@@ -29,19 +29,15 @@ class MyButton extends StatelessWidget {
               width: 50,
               fit: BoxFit.cover,
             ),
-            // Icon(icon, size: 50, color: Colors.greenAccent),
+            // Icon(icon, size: 70, color: Colors.greenAccent),
             // SizedBox(height: 5),
             Text(
               text,
               style: TextStyle(
-                // color: Colors.grey,
                 fontSize: 10.0,
+                // fontWeight: FontWeight.w300,
                 fontFamily: 'BeldaNorm',
-                //fontWeight: FontWeight.w600,
-                // height: 1.3,
               ),
-
-              // style: OnBoardingScreen.style,
             ),
           ],
         ),
@@ -54,35 +50,20 @@ class MyButton extends StatelessWidget {
         ),*/
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
+          color: Color(0xFFE7F0FF),
+          borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
-                color: Colors.grey[100],
-                offset: Offset(0, 3),
-                blurRadius: 15.0,
+                color: Colors.grey,
+                offset: Offset(1, 3),
+                blurRadius: 6.0,
                 spreadRadius: 1.0),
             BoxShadow(
-                color: Colors.white,
+                color: Colors.grey[50],
                 offset: Offset(-4.0, -4.0),
-                blurRadius: 15.0,
+                blurRadius: 6.0,
                 spreadRadius: 1.0),
           ],
-          /* gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Colors.grey,
-                  Colors.grey,
-                  Colors.grey,
-                  Colors.grey,
-                ],
-                stops: [
-                  0.1,
-                  0.3,
-                  0.8,
-                  1
-                ])*/
         ),
       ),
     );

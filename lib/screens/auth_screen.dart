@@ -87,7 +87,7 @@ class _Auth_ScreenState extends State<Auth_Screen> {
                           /*Padding(
                         padding: const EdgeInsets.all(0),
                         child:*/
-                          FlatButton(
+                          RaisedButton(
                         onPressed: () async {
                           var response = await networking.otpsent(phone);
                           if (response == 200) {
@@ -118,7 +118,7 @@ class _Auth_ScreenState extends State<Auth_Screen> {
               ),
             ),
           ),
-          /*  Row(
+          /*Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text('Have an account already?'),

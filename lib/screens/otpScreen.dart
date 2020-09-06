@@ -1,22 +1,102 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_ui/Networking/otp-verify.dart';
-import 'package:flutter_onboarding_ui/screens/Homepage.dart';
-import 'package:passcode/passcode.dart';
+import 'package:flutter_onboarding_ui/Networking/user_provider.dart';
 
-import '../Widget/Button.dart';
+import 'package:passcode/passcode.dart';
+import 'package:provider/provider.dart';
 
 import '../constants.dart';
-import 'Navbar.dart';
+import 'NavigationBar.dart';
 
 class OtpScreen extends StatelessWidget {
   OtpScreen({this.phoneNumber});
 
   final String phoneNumber;
   String otp;
+  Positioned _greetings() {
+    return Positioned(
+      left: 20,
+      bottom: 60,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(
+            'Hi Johnmiller',
+            style: TextStyle(
+              fontSize: 24,
+              fontFamily: 'BeldaNorm',
+              fontWeight: FontWeight.w500,
+              color: Colors.white,
+            ),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Text(
+            'Welcome to PPM United',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w300,
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container _backBgCover() {
+    return Container(
+      height: 135.0,
+      decoration: BoxDecoration(
+        gradient: purpleGradient,
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(40),
+          bottomRight: Radius.circular(40),
+        ),
+      ),
+    );
+  }
+
+  Positioned _moodsHolder() {
+    return Positioned(
+      bottom: -40,
+      child: Container(
+        height: 65.0,
+        width: 312,
+        padding: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            boxShadow: [
+              /* BoxShadow(
+                color: Colors.black12,
+                spreadRadius: 5.5,
+                blurRadius: 5.5,
+              )*/
+            ]),
+        child: TextField(
+          decoration: InputDecoration(
+            hintText: '',
+            contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+            border: InputBorder.none,
+            icon: Icon(Icons.search, size: 30, color: Colors.black),
+            suffixIcon: SizedBox(
+              width: 50,
+              child: Icon(Icons.list, size: 30, color: Colors.black),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     Networking network = Networking();
+    // final user = Provider.of<UserProvider>(context);
 
     return Scaffold(
         backgroundColor: kbgcolor,
@@ -90,8 +170,7 @@ class OtpScreen extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        TabContainerDefault()));
+                                    builder: (context) => TabsDemoScreen()));
                             //response= network.login(phoneNumber, token);
                             // phoneNumber
 

@@ -70,6 +70,8 @@ class User {
         phoneNumber: json["phone_number"],
       );
 
+  String get otp => null;
+
   Map<String, dynamic> toJson() => {
         "status": status,
         "token": token,

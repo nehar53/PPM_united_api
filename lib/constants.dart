@@ -51,3 +51,13 @@ const kContainerdecoration1 = BoxDecoration(
         1,
       ]),
 );
+const darkColor = Color(0xFF08B3E5);
+
+const midColor = Color(0xFF2AF598);
+//const lightColor = Color(0xFFE7F0FF);
+const purpleGradient = LinearGradient(
+  colors: <Color>[darkColor, midColor],
+  stops: [0.0, 0.6],
+  begin: Alignment.topRight,
+  end: Alignment.bottomRight,
+);

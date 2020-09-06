@@ -1,46 +1,23 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding_ui/screens/Navbar.dart';
+import 'package:flutter_onboarding_ui/screens/NavigationBar.dart';
 import 'package:flutter_onboarding_ui/screens/auth_screen.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
-import 'Homepage.dart';
-
 class OnBoardingScreen extends StatefulWidget {
-  static final style = TextStyle(
-    fontSize: 26,
-    fontFamily: "SweetSansPro",
-    fontWeight: FontWeight.w900,
-  );
-  static final style1 = TextStyle(
-    fontSize: 20,
-    fontFamily: "SweetSansPro",
-    fontWeight: FontWeight.w600,
-  );
-  static const TextStyle descriptionWhiteStyle = TextStyle(
-    color: Colors.white,
-    fontSize: 16.0,
-    fontFamily: "SweetSansPro",
-  );
-  static const TextStyle descriptionWhiteStyle1 = TextStyle(
-      color: Colors.white,
-      fontSize: 26.0,
-      fontFamily: "SweetSansPro",
-      fontWeight: FontWeight.w900);
-
   @override
   _FirstScreenState createState() => _FirstScreenState();
 }
 
 class _FirstScreenState extends State<OnBoardingScreen> {
   int page = 0;
-  LiquidController liquidController;
+  PageController pageController;
   UpdateType updateType;
 
   @override
   void initState() {
-    liquidController = LiquidController();
+    pageController = PageController();
     super.initState();
   }
 
@@ -113,7 +90,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 16.0,
+                        fontSize: 20.0,
                         fontFamily: 'SweetSansPro',
                         // fontWeight: FontWeight.w500,
                         // height: 1.3,
@@ -191,7 +168,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 16.0,
+                        fontSize: 20.0,
                         fontFamily: 'SweetSansPro',
                         //fontWeight: FontWeight.w500,
                         // height: 1.3,
@@ -271,7 +248,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 16.0,
+                        fontSize: 20.0,
                         fontFamily: 'SweetSansPro',
                         //fontWeight: FontWeight.w500,
                         // height: 1.3,
@@ -350,7 +327,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 16.0,
+                        fontSize: 20.0,
                         fontFamily: 'SweetSansPro',
                         // fontWeight: FontWeight.w500,
                         // height: 1.3,
@@ -364,7 +341,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                       
                         child: FlatButton(
                           onPressed: () {
-                            // liquidController.animateToPage(
+                            // pageController.animateToPage(
                             //    page: pages.length - 1, duration: 500);
                           },
                           child: Text(
@@ -419,12 +396,17 @@ class _FirstScreenState extends State<OnBoardingScreen> {
         backgroundColor: Color(0xFFECECEC),
         body: Stack(
           children: <Widget>[
-            LiquidSwipe(
+            /* LiquidSwipe(
               pages: pages,
               onPageChangeCallback: pageChangeCallback,
               waveType: WaveType.liquidReveal,
-              liquidController: liquidController,
-              ignoreUserGestureWhileAnimating: true,
+              pageController: pageController,
+              ignoreUserGestureWhileAnimating: false,
+            ),*/
+            PageView(
+              onPageChanged: pageChangeCallback,
+              children: pages,
+              controller: pageController,
             ),
             Padding(
               padding: EdgeInsets.all(20),
@@ -444,7 +426,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                 padding: const EdgeInsets.all(10.0),
                 child: FlatButton(
                   onPressed: () {
-                    // liquidController.animateToPage(
+                    // pageController.animateToPage(
                     //    page: pages.length - 1, duration: 500);
                     Navigator.of(context).pop();
                     Navigator.push(
@@ -471,7 +453,13 @@ class _FirstScreenState extends State<OnBoardingScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    if (pageController.hasClients) {
+                      pageController.animateToPage(page + 1,
+                          duration: Duration(milliseconds: 400),
+                          curve: Curves.easeInOut);
+                    }
+                  },
                   child: Text(
                     "Next",
                     style: TextStyle(

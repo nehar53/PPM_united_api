@@ -1,5 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:flutter_onboarding_ui/screens/profilescreen.dart';
 
 const url = 'https://seriapp.herokuapp.com/api/customer/auth-user/';
 const url1 = 'https://seriapp.herokuapp.com/api/customer/auth-otp/';
@@ -39,7 +40,7 @@ class Networking {
     }
   }
 
-  Future<int> login(String phoneNumber, String token) async {
+  Future<int> login(String phoneNumber, token) async {
     var answeredResponse = await http.post(
         '${'https://seriapp.herokuapp.com/api/customer/auth-otp/'}',
         headers: {
