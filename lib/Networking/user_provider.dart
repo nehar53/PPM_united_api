@@ -20,7 +20,7 @@ class UserProvider with ChangeNotifier {
     getotp();
   }
 
-  Future<int> loginUser(String phoneNumber) async {
+  Future<bool> loginUser(String phoneNumber, otp) async {
     final result = await Networking().otpVerification(phoneNumber, otp);
     _status = Status.Authenticating;
     this.user = result as User;

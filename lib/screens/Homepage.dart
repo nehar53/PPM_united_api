@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_onboarding_ui/screens/slider.dart';
 
-import '../constants.dart';
+import '../Widget/constants.dart';
 import 'Mybutton.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -170,6 +170,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             _backBgCover(),
 
                             _greetings(),
+
                             _moodsHolder(),
                             // _searchField()
                           ],

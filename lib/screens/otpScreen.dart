@@ -6,7 +6,7 @@ import 'package:flutter_onboarding_ui/Networking/user_provider.dart';
 import 'package:passcode/passcode.dart';
 import 'package:provider/provider.dart';
 
-import '../constants.dart';
+import '../Widget/constants.dart';
 import 'NavigationBar.dart';
 
 class OtpScreen extends StatelessWidget {

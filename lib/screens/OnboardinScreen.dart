@@ -75,7 +75,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 26.0,
+                        fontSize: 30.0,
                         fontFamily: 'SweetSansPro',
                         fontWeight: FontWeight.w600,
                         // height: 1.3,
@@ -153,7 +153,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 26.0,
+                        fontSize: 30.0,
                         fontFamily: 'SweetSansPro',
                         fontWeight: FontWeight.w600,
                         // height: 1.3,
@@ -233,7 +233,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 26.0,
+                        fontSize: 30.0,
                         fontFamily: 'SweetSansPro',
                         fontWeight: FontWeight.w600,
                         // height: 1.3,
@@ -313,7 +313,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 26.0,
+                        fontSize: 30.0,
                         fontFamily: 'SweetSansPro',
                         fontWeight: FontWeight.w600,
                         // height: 1.3,

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_ui/Data_Handling/screen1_data.dart';
 import 'package:flutter_onboarding_ui/Networking/otp-verify.dart';
 
-import '../constants.dart';
+import '../Widget/constants.dart';
 
 class Profilescreen extends StatelessWidget {
   Profilescreen({this.phoneNumber1});

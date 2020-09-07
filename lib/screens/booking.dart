@@ -21,8 +21,8 @@ class BookingScreen extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              FirstScreen(),
-              SecondScreen(),
+              OnGoingScreen(),
+              HistoryScreen(),
             ],
           ),
         ),
@@ -31,7 +31,7 @@ class BookingScreen extends StatelessWidget {
   }
 }
 
-class FirstScreen extends StatelessWidget {
+class OnGoingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -113,7 +113,7 @@ class FirstScreen extends StatelessWidget {
   }
 }
 
-class SecondScreen extends StatelessWidget {
+class HistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

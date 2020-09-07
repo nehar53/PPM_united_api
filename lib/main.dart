@@ -26,14 +26,14 @@ class MyApp extends StatelessWidget {
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: Provider1(),
+          home: Auth_Screen(),
           theme: ThemeData(
               primarySwatch: Colors.green, primaryColor: Colors.greenAccent),
         ));
   }
 }
 
-class Provider1 extends StatelessWidget {
+/*class Provider1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final userprovider = Provider.of<UserProvider>(context);
@@ -48,4 +48,4 @@ class Provider1 extends StatelessWidget {
       );
     }
   }
-}
+}*/
