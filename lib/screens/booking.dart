@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding_ui/screens/Homepage.dart';
+import 'package:flutter_onboarding_ui/screens/HomeScreen/Homepage.dart';
 
 class BookingScreen extends StatelessWidget {
   @override
@@ -43,11 +43,9 @@ class OnGoingScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
               Container(
-                //   color: Color(0xFFEF4935),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.max,
-                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Image.asset(
                       'assets/images/del_1.png',
@@ -77,8 +75,6 @@ class OnGoingScreen extends StatelessWidget {
                         color: Colors.black,
                         fontSize: 16.0,
                         fontFamily: 'SweetSansPro',
-                        // fontWeight: FontWeight.w500,
-                        // height: 1.3,
                       ),
                     ),
                     Align(
@@ -125,11 +121,9 @@ class HistoryScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
               Container(
-                //   color: Color(0xFFEF4935),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.max,
-                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Image.asset(
                       'assets/images/del_2.png',
@@ -159,8 +153,6 @@ class HistoryScreen extends StatelessWidget {
                         color: Colors.black,
                         fontSize: 16.0,
                         fontFamily: 'SweetSansPro',
-                        // fontWeight: FontWeight.w500,
-                        // height: 1.3,
                       ),
                     ),
                     Align(

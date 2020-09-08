@@ -1,10 +1,12 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding_ui/Data_Handling/screen1_data.dart';
-import 'package:flutter_onboarding_ui/Networking/otp-verify.dart';
 
-import '../Widget/constants.dart';
+import 'package:flutter_onboarding_ui/Networking/service.dart';
+import 'package:flutter_onboarding_ui/screens/OnboardinScreen.dart';
+
+import 'package:provider/provider.dart';
+
+import '../Networking/user_provider.dart';
+import 'package:flutter/cupertino.dart';
 
 class Profilescreen extends StatelessWidget {
   Profilescreen({this.phoneNumber1});
@@ -13,8 +15,8 @@ class Profilescreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Networking network = Networking();
-
+    final userprovider = Provider.of<UserProvider>(context);
+    Networking networking = Networking();
     return Scaffold(
       //  leading: IconButton(
       //    icon: Icon(Icons.menu),
@@ -29,9 +31,15 @@ class Profilescreen extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                Text(
-                  '+91 $phoneNumber1',
-                  style: TextStyle(color: Colors.black),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: Text(
+                    //  networking.otpsent(phoneNumber.toString(),
+                    //  userprovider.phoneNumber,
+                    "kmkmkm",
+
+                    style: TextStyle(color: Colors.black, fontSize: 20.0),
+                  ),
                 ),
               ],
             ),
@@ -65,30 +73,6 @@ class Profilescreen extends StatelessWidget {
               ),
               onTap: () {},
             ),
-
-            // Divider(
-            //   height: 10.0,
-            //   color: Colors.grey,
-            // ),
-            /*   ListTile(
-              title: Row(
-                children: <Widget>[
-                  Icon(Icons.list),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(" Purchase ")
-                ],
-              ),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => ListTile(
-                        )));
-              },
-            ),*/
             ListTile(
               title: Row(
                 children: <Widget>[
@@ -113,24 +97,6 @@ class Profilescreen extends StatelessWidget {
               ),
               onTap: () {},
             ),
-            /*  ListTile(
-              title: Row(
-                children: <Widget>[
-                  Icon(Icons.list),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(" DashBoard ")
-                ],
-              ),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => MyHomePage()));
-              },
-            ),*/
             ListTile(
               title: Row(
                 children: <Widget>[
@@ -167,7 +133,6 @@ class Profilescreen extends StatelessWidget {
               ),
               onTap: () {},
             ),
-
             Divider(
               height: 10.0,
               color: Colors.grey,
@@ -191,8 +156,12 @@ class Profilescreen extends StatelessWidget {
                         padding: const EdgeInsets.all(0),
                         child:*/
                   FlatButton(
-                onPressed: () async {
-                  await network.otpsent(phoneNumber1);
+                onPressed: () {
+                  userprovider.signOut();
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => OnBoardingScreen()));
                 },
                 child: Text(
                   "Logout",

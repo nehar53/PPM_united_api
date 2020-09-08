@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_ui/Data_Handling/screen1_data.dart';
-import 'package:flutter_onboarding_ui/Networking/otp-verify.dart';
+import 'package:flutter_onboarding_ui/Networking/service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 
@@ -14,14 +14,15 @@ class UserProvider with ChangeNotifier {
   String token;
   String phoneNumber;
   String otp;
+  Networking network = Networking();
   UserProvider() {
     getUserToken();
     getUserphoneNumber();
     getotp();
   }
 
-  Future<bool> loginUser(String phoneNumber, otp) async {
-    final result = await Networking().otpVerification(phoneNumber, otp);
+  Future<bool> loginUser(String phoneNumber) async {
+    final result = await network.otpVerification(phoneNumber, otp);
     _status = Status.Authenticating;
     this.user = result as User;
     this.phoneNumber = user.phoneNumber;
@@ -76,5 +77,20 @@ class UserProvider with ChangeNotifier {
     this.otp = await prefs.getString("otp_code" ?? '');
 
     return otp;
+  }
+
+  deleteUserToken() async {
+    final pref = await SharedPreferences.getInstance();
+    await pref.clear();
+    _status = Status.Unauthenticated;
+    print('tokendeleted');
+    notifyListeners();
+  }
+
+  Future signOut() async {
+    deleteUserToken();
+
+    notifyListeners();
+    return Future.delayed(Duration.zero); // need for type return
   }
 }

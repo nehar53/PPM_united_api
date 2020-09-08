@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_ui/Networking/user_provider.dart';
 import 'package:flutter_onboarding_ui/screens/OnboardinScreen.dart';
-import 'package:flutter_onboarding_ui/screens/Homepage.dart';
-import 'package:flutter_onboarding_ui/screens/NavigationBar.dart';
-
-//import 'package:flutter_onboarding_ui/screens/OnboardingScreen.dart';
-import 'package:flutter_onboarding_ui/screens/auth_screen.dart';
+import 'package:flutter_onboarding_ui/screens/HomeScreen/Homepage.dart';
 
 import 'package:provider/provider.dart';
 

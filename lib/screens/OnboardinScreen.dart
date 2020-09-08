@@ -1,9 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding_ui/screens/NavigationBar.dart';
+
 import 'package:flutter_onboarding_ui/screens/auth_screen.dart';
-import 'package:liquid_swipe/liquid_swipe.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   @override
@@ -13,7 +12,6 @@ class OnBoardingScreen extends StatefulWidget {
 class _FirstScreenState extends State<OnBoardingScreen> {
   int page = 0;
   PageController pageController;
-  UpdateType updateType;
 
   @override
   void initState() {
@@ -23,16 +21,10 @@ class _FirstScreenState extends State<OnBoardingScreen> {
 
   final pages = [
     Container(
-        //First Page Starts from
-        // color: Colors.grey[400],
-        margin: EdgeInsets.only(
-            left: 10, top: 10, right: 10, bottom: 10), //change ur Box Size
+        margin: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
-          //  shape: BoxShape.rectangle,
-          // color: Color(0xFFEF4935),
-
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(
             begin: Alignment.topLeft,
@@ -41,24 +33,13 @@ class _FirstScreenState extends State<OnBoardingScreen> {
               Color(0xFF08B3E5),
               Color(0xFF2AF598),
             ],
-            /* stops: [
-                0.2,
-                0.1,
-                0.10,
-                1,
-                0.1
-              ]*/
           ),
-          //  shape: BoxShape.circle, // BoxShape.circle or BoxShape.retangle
-
-          // color: const Color(0xFF66BB6A),
         ),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Container(
-                //   color: Color(0xFFEF4935),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.max,
@@ -119,17 +100,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
               Color(0xFF08B3E5),
               //Colors.(0xFF2AF598)[400],
             ],
-            /* stops: [
-                0.2,
-                0.1,
-                0.10,
-                1,
-                0.1
-              ]*/
           ),
-          //  shape: BoxShape.circle, // BoxShape.circle or BoxShape.retangle
-
-          // color: const Color(0xFF66BB6A),
         ),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -199,17 +170,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
 
               //Colors.(0xFF2AF598)[400],
             ],
-            /* stops: [
-                0.2,
-                0.1,
-                0.10,
-                1,
-                0.1
-              ]*/
           ),
-          //  shape: BoxShape.circle, // BoxShape.circle or BoxShape.retangle
-
-          // color: const Color(0xFF66BB6A),
         ),
         child: Column(
             //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -271,23 +232,11 @@ class _FirstScreenState extends State<OnBoardingScreen> {
             begin: Alignment.topLeft,
             end: Alignment.bottomLeft,
             colors: [
-              //Colors.(0xFF2AF598)[400],
-              // Colors.(0xFF2AF598)[400],
               Color(0xFF2AF598),
               Color(0xFF08B3E5),
               //Colors.(0xFF2AF598)[400],
             ],
-            /* stops: [
-                0.2,
-                0.1,
-                0.10,
-                1,
-                0.1
-              ]*/
           ),
-          //  shape: BoxShape.circle, // BoxShape.circle or BoxShape.retangle
-
-          // color: const Color(0xFF66BB6A),
         ),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -333,31 +282,6 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                         // height: 1.3,
                       ),
                     ),
-                    /* SizedBox(
-                      height: 230,
-                    ),
-                    Align(
-                      alignment: Alignment.bottomRight,
-                      
-                        child: FlatButton(
-                          onPressed: () {
-                            // pageController.animateToPage(
-                            //    page: pages.length - 1, duration: 500);
-                          },
-                          child: Text(
-                            "Next",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontFamily: 'SweetSansPro',
-                              fontWeight: FontWeight.w500,
-                              // height: 1.3,
-                            ),
-                          ),
-                          color: Colors.white.withOpacity(0.01),
-                        ),
-                      ),
-                    ),*/
                   ],
                 ),
               ),
@@ -396,13 +320,6 @@ class _FirstScreenState extends State<OnBoardingScreen> {
         backgroundColor: Color(0xFFECECEC),
         body: Stack(
           children: <Widget>[
-            /* LiquidSwipe(
-              pages: pages,
-              onPageChangeCallback: pageChangeCallback,
-              waveType: WaveType.liquidReveal,
-              pageController: pageController,
-              ignoreUserGestureWhileAnimating: false,
-            ),*/
             PageView(
               onPageChanged: pageChangeCallback,
               children: pages,
@@ -426,8 +343,6 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                 padding: const EdgeInsets.all(10.0),
                 child: FlatButton(
                   onPressed: () {
-                    // pageController.animateToPage(
-                    //    page: pages.length - 1, duration: 500);
                     Navigator.of(context).pop();
                     Navigator.push(
                         context,

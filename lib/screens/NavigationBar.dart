@@ -1,21 +1,22 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding_ui/screens/Homepage.dart';
+import 'package:flutter_onboarding_ui/screens/HomeScreen/Homepage.dart';
 import 'package:flutter_onboarding_ui/screens/booking.dart';
+import 'package:flutter_onboarding_ui/screens/otpScreen.dart';
 import 'package:flutter_onboarding_ui/screens/profilescreen.dart';
 import 'package:http/http.dart' as http;
 
-class TabsDemoScreen extends StatefulWidget {
-  // TabsDemoScreen() : super();
+class Navigation extends StatefulWidget {
+  // Navigation() : super();
 
   // final String title = "Flutter Bottom Tab demo";
 
   @override
-  _TabsDemoScreenState createState() => _TabsDemoScreenState();
+  _Navigation_Screen createState() => _Navigation_Screen();
 }
 
-class _TabsDemoScreenState extends State<TabsDemoScreen> {
+class _Navigation_Screen extends State<Navigation> {
   int currentTabIndex = 0;
   List<Widget> tabs = [
     MyHomePage(),
@@ -24,6 +25,7 @@ class _TabsDemoScreenState extends State<TabsDemoScreen> {
     MyHomePage(),
     Profilescreen()
   ];
+
   onTapped(int index) {
     setState(() {
       currentTabIndex = index;
