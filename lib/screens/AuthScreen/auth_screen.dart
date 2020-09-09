@@ -2,10 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_onboarding_ui/Networking/service.dart';
-import 'package:flutter_onboarding_ui/Networking/user_provider.dart';
-import 'package:provider/provider.dart';
 
-import '../Widget/constants.dart';
+import 'package:flutter_onboarding_ui/constants.dart';
 
 import 'otpScreen.dart';
 import 'package:international_phone_input/international_phone_input.dart';
@@ -31,7 +29,6 @@ class _Auth_ScreenState extends State<Auth_Screen> {
 
   @override
   Widget build(BuildContext context) {
-    final userprovider = Provider.of<UserProvider>(context);
     return Scaffold(
       backgroundColor: Color(0xFFE7F0FF),
       body: Column(
@@ -87,7 +84,7 @@ class _Auth_ScreenState extends State<Auth_Screen> {
                         child:*/
                           RaisedButton(
                         onPressed: () async {
-                          userprovider.setUserToken();
+                          //  userprovider.setUserToken();
 
                           var response = await networking.otpsent(phone);
                           if (response == 200) {

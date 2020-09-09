@@ -6,7 +6,6 @@ import 'package:flutter_onboarding_ui/screens/HomeScreen/Homepage.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  // SystemChrome.setEnabledSystemUIOverlays([]);
   runApp(MyApp());
 }
 

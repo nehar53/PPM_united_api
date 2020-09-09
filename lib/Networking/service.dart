@@ -1,10 +1,16 @@
+import 'package:flutter_onboarding_ui/Data_Handling/screen1_data.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'package:shared_preferences/shared_preferences.dart';
+
 class Networking {
+  var token;
+  User user = User();
   Future<int> otpsent(String phoneNumber) async {
     var answeredResponse = await http.post(
         '${'https://seriapp.herokuapp.com/api/customer/auth-user/'}',
+        // SharedPreferences prefs = await SharedPreferences.getInstance();
         headers: {
           'Content-Type': 'application/json',
         },

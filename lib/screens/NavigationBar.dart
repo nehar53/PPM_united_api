@@ -3,15 +3,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_ui/screens/HomeScreen/Homepage.dart';
 import 'package:flutter_onboarding_ui/screens/booking.dart';
-import 'package:flutter_onboarding_ui/screens/otpScreen.dart';
+
 import 'package:flutter_onboarding_ui/screens/profilescreen.dart';
-import 'package:http/http.dart' as http;
 
 class Navigation extends StatefulWidget {
-  // Navigation() : super();
-
-  // final String title = "Flutter Bottom Tab demo";
-
   @override
   _Navigation_Screen createState() => _Navigation_Screen();
 }

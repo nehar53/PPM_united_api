@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_onboarding_ui/Networking/service.dart';
 import 'package:flutter_onboarding_ui/screens/OnboardinScreen.dart';
 
 import 'package:provider/provider.dart';
@@ -9,18 +8,11 @@ import '../Networking/user_provider.dart';
 import 'package:flutter/cupertino.dart';
 
 class Profilescreen extends StatelessWidget {
-  Profilescreen({this.phoneNumber1});
-
-  final String phoneNumber1;
-
   @override
   Widget build(BuildContext context) {
     final userprovider = Provider.of<UserProvider>(context);
-    Networking networking = Networking();
-    return Scaffold(
-      //  leading: IconButton(
-      //    icon: Icon(Icons.menu),
 
+    return Scaffold(
       body: Container(
         child: ListView(
           children: <Widget>[
@@ -34,10 +26,7 @@ class Profilescreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: Text(
-                    //  networking.otpsent(phoneNumber.toString(),
-                    //  userprovider.phoneNumber,
-                    "kmkmkm",
-
+                    '${userprovider.phoneNumber}',
                     style: TextStyle(color: Colors.black, fontSize: 20.0),
                   ),
                 ),

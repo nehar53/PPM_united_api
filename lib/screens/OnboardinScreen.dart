@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import 'package:flutter_onboarding_ui/screens/auth_screen.dart';
+import 'package:flutter_onboarding_ui/screens/AuthScreen/auth_screen.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   @override
@@ -249,7 +249,7 @@ class _FirstScreenState extends State<OnBoardingScreen> {
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
                     Image.asset(
-                      'assets/images/4.png', //change require in image;;;;;;;;;;;;;
+                      'assets/images/2.png', //change require in image;;;;;;;;;;;;;
                       height: 300,
                       width: 300,
                       fit: BoxFit.cover,

@@ -5,8 +5,6 @@ Customer customerFromJson(String str) => Customer.fromJson(json.decode(str));
 String customerToJson(Customer data) => json.encode(data.toJson());
 
 class Customer {
-  //var userDetails;
-
   Customer({
     this.phoneNumber,
   });

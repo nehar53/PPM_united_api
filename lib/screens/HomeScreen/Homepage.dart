@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_onboarding_ui/screens/HomeScreen/slider.dart';
 
-import '../../Widget/constants.dart';
+import '../../constants.dart';
 import 'Mybutton.dart';
 
 class MyHomePage extends StatefulWidget {

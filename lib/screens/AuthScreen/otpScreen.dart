@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_ui/Networking/service.dart';
+import 'package:flutter_onboarding_ui/constants.dart';
 
 import 'package:passcode/passcode.dart';
 
-import '../Widget/constants.dart';
-import 'NavigationBar.dart';
+import '../NavigationBar.dart';
 
 class OtpScreen extends StatelessWidget {
   OtpScreen({this.phoneNumber});
@@ -63,15 +63,11 @@ class OtpScreen extends StatelessWidget {
                         child: FlatButton(
                           onPressed: () async {
                             await network.otpVerification(phoneNumber, otp);
-                            //  if (response == 202) {
+
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => Navigation()));
-                            //response= network.login(phoneNumber, token);
-                            // phoneNumber
-
-                            //  }
                           },
                           child: Text(
                             "VERIFY",
