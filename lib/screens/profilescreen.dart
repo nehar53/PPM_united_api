@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/screens/AuthScreen/auth_screen.dart';
 
-import 'package:flutter_onboarding_ui/screens/OnboardinScreen.dart';
+import 'package:flutter_app/screens/OnboardinScreen.dart';
 
 import 'package:provider/provider.dart';
 
 import '../Networking/user_provider.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'AuthScreen/otpScreen.dart';
+
 class Profilescreen extends StatelessWidget {
+  Profilescreen( {this.phoneNumber3});
+
+  final String phoneNumber3;
   @override
   Widget build(BuildContext context) {
     final userprovider = Provider.of<UserProvider>(context);
@@ -26,7 +32,7 @@ class Profilescreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: Text(
-                    '${userprovider.phoneNumber}',
+                   '91$phoneNumber3',
                     style: TextStyle(color: Colors.black, fontSize: 20.0),
                   ),
                 ),
