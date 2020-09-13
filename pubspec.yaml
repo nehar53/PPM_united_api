@@ -25,7 +25,7 @@ dependencies:
   http: ^0.12.2
   international_phone_input: ^1.0.4
   carousel_slider: ^1.4.1
-  
+  bubble_bottom_bar: ^1.2.0
   passcode: ^0.1.2 
   
   # The following adds the Cupertino Icons font to your application.
