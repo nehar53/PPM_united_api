@@ -1,28 +1,11 @@
 import 'dart:convert';
 
-Customer customerFromJson(String str) => Customer.fromJson(json.decode(str));
+import 'package:flutter_app/Networking/user_provider.dart';
 
-String customerToJson(Customer data) => json.encode(data.toJson());
 
-class Customer {
-  Customer({
-    this.phoneNumber,
-  });
+//Confirm confirmFromJson(String str) => Confirm.fromJson(json.decode(str));
 
-  String phoneNumber;
-
-  factory Customer.fromJson(Map<String, dynamic> json) => Customer(
-        phoneNumber: json["phone_number"],
-      );
-
-  Map<String, dynamic> toJson() => {
-        "phone_number": phoneNumber,
-      };
-}
-
-Confirm confirmFromJson(String str) => Confirm.fromJson(json.decode(str));
-
-String confirmToJson(Confirm data) => json.encode(data.toJson());
+//String confirmToJson(Confirm data) => json.encode(data.toJson());
 
 class Confirm {
   Confirm({
@@ -33,20 +16,22 @@ class Confirm {
   String phoneNumber;
   String otpCode;
 
-  factory Confirm.fromJson(Map<String, dynamic> json) => Confirm(
-        phoneNumber: json["phone_number"],
-        otpCode: json["otp_code"],
-      );
+   Confirm.fromJson(Map<String, dynamic> json) {
+     phoneNumber = json["phone_number"];
+     otpCode = json["otp_code"];
+   }
 
-  Map<String, dynamic> toJson() => {
-        "phone_number": phoneNumber,
-        "otp_code": otpCode,
-      };
+  Map<String, dynamic> toJson()  {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+        data["phone_number"]=this.phoneNumber;
+    data["otp_code"]=this.otpCode;
+return data;
+      }
 }
 
-User userFromJson(String str) => User.fromJson(json.decode(str));
+//User userFromJson(String str) => User.fromJson(json.decode(str));
 
-String userToJson(User data) => json.encode(data.toJson());
+//String userToJson(User data) => json.encode(data.toJson());
 
 class User {
   User({
@@ -59,21 +44,27 @@ class User {
   String status;
   String token;
   String message;
-  String phoneNumber;
+  Confirm phoneNumber;
 
-  factory User.fromJson(Map<String, dynamic> json) => User(
-        status: json["status"],
-        token: json["token"],
-        message: json["message"],
-        phoneNumber: json["phone_number"],
-      );
+   User.fromJson(Map<String, dynamic> json) {
+     status = json["status"];
+     token = json["token"];
+     message = json["message"];
+     phoneNumber = json["phone_number"] != null
+         ? new Confirm.fromJson(json['phone_number'])
+         : null;
+   }
 
-  String get otp => null;
 
-  Map<String, dynamic> toJson() => {
-        "status": status,
-        "token": token,
-        "message": message,
-        "phone_number": phoneNumber,
-      };
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data["status"] = this.status;
+    data["token"] = this.token;
+    data[ "message"] = this.message;
+    if (this.phoneNumber != null) {
+      data[ "phone_number"] = this.phoneNumber.toJson();
+    }
+    return data;
+  }
 }
