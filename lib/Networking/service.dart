@@ -1,4 +1,6 @@
-import 'package:flutter_onboarding_ui/Data_Handling/screen1_data.dart';
+import 'dart:io';
+
+import 'package:flutter_app/Data_Handling/screen1_data.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -17,51 +19,36 @@ class Networking {
         body: json.encode({"phone_number": phoneNumber}));
     print(answeredResponse.statusCode);
     if (answeredResponse.statusCode == 200) {
-      return answeredResponse.statusCode;
+      return answeredResponse.statusCode ;
     } else {
       print('backend error');
       return null;
     }
   }
 
-  Future<int> otpVerification(String phoneNumber, String otp) async {
-    var answeredResponse = await http.post(
+  Future<User> otpVerification(String phoneNumber, String otp) async {
+   // final sharedPreferences = await SharedPreferences.getInstance();
+
+    final answeredResponse = await http.post(
         '${'https://seriapp.herokuapp.com/api/customer/auth-otp/'}',
         headers: {
           'Content-Type': 'application/json',
+
         },
         body: json.encode({"phone_number": phoneNumber, "otp_code": otp}));
 
     print(answeredResponse.statusCode);
     if (answeredResponse.statusCode == 200) {
       print(answeredResponse.body);
-      return answeredResponse.statusCode;
+      return User.fromJson(json.decode(answeredResponse.body)) ;
     } else {
-      print('backend error');
+      print('login successfully');
       return null;
     }
   }
 
-  Future<int> login(String phoneNumber, token) async {
-    var answeredResponse = await http.post(
-        '${'https://seriapp.herokuapp.com/api/customer/auth-otp/'}',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: json.encode({
-          "status": "success",
-          "token": token,
-          "message": "Success user Authentication",
-          "phone_number": phoneNumber
-        }));
 
-    print(answeredResponse.statusCode);
-    if (answeredResponse.statusCode == 200) {
-      print(answeredResponse.body);
-      return answeredResponse.statusCode;
-    } else {
-      print('backend error');
-      return null;
-    }
-  }
+
+
+
 }
