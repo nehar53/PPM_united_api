@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding_ui/Data_Handling/screen1_data.dart';
-import 'package:flutter_onboarding_ui/Networking/service.dart';
+import 'package:flutter_app/Data_Handling/screen1_data.dart';
+import 'package:flutter_app/Networking/service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum Status { Authenticated, Authenticating, Unauthenticated }
@@ -23,10 +23,10 @@ class UserProvider with ChangeNotifier {
   Future<bool> loginUser(String phoneNumber, otp) async {
     final result = await network.otpVerification(phoneNumber, otp);
     _status = Status.Authenticating;
-    this.user = result as User;
-    this.phoneNumber = user.phoneNumber;
-    this.otp = user.otp;
-    this.token = user.token;
+    this.user = result ;
+    //this.phoneNumber = user.phoneNumber.phoneNumber;
+    //this.otp = user.phoneNumber.otpCode;
+    //this.token = user.token;
 
     await setUserToken();
 
@@ -34,7 +34,7 @@ class UserProvider with ChangeNotifier {
 
     _status = Status.Authenticated;
 
-    print("login success");
+    print(result);
 
     notifyListeners();
   }
@@ -52,7 +52,7 @@ class UserProvider with ChangeNotifier {
 
   getUserToken() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    this.token = await prefs.getString("token");
+    this.token =  prefs.getString("token");
     if (token == null) {
       _status = Status.Unauthenticated;
     } else {
