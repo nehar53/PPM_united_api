@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/Networking/service.dart';
+import 'package:flutter_app/Networking/user_provider.dart';
 import 'package:flutter_app/constants.dart';
 
 import 'package:passcode/passcode.dart';
+import 'package:provider/provider.dart';
 
 import '../NavigationBar.dart';
 
@@ -15,8 +17,8 @@ class OtpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Networking network = Networking();
-
+   // Networking user = Networking();
+    final user = Provider.of<UserProvider>(context);
     return Scaffold(
         backgroundColor: kbgcolor,
         body: Center(
@@ -60,17 +62,20 @@ class OtpScreen extends StatelessWidget {
                       ),
                       Align(
                         alignment: Alignment.center,
-                        child: FlatButton(
+                        child: RaisedButton(
                           onPressed: () async {
-                            //var Response
-                            await network.otpVerification(phoneNumber, otp);
-//if (Response==202) {
-  Navigator.push(
-      context,
-      MaterialPageRoute(
-          builder: (context) => Navigation(phoneNumber1: phoneNumber)));
-//}
+
+                            await user.loginUser( phoneNumber, otp);
+                           /* Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Navigation(phoneNumber1: phoneNumber)));*/
+
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Navigation(phoneNumber1: phoneNumber)));
+
                           },
+
                           child: Text(
                             "VERIFY",
                             style: TextStyle(
@@ -92,3 +97,4 @@ class OtpScreen extends StatelessWidget {
         ));
   }
 }
+
