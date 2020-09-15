@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter_app/Networking/user_provider.dart';
+import 'package:flutter_onboarding_ui/Networking/user_provider.dart';
 
 
 //Confirm confirmFromJson(String str) => Confirm.fromJson(json.decode(str));
