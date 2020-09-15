@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/Networking/service.dart';
-import 'package:flutter_app/Networking/user_provider.dart';
-import 'package:flutter_app/constants.dart';
+import 'package:flutter_onboarding_ui/Networking/service.dart';
+import 'package:flutter_onboarding_ui/Networking/user_provider.dart';
+import 'package:flutter_onboarding_ui/constants.dart';
 
 import 'package:passcode/passcode.dart';
 import 'package:provider/provider.dart';
