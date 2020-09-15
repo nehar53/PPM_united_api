@@ -1,9 +1,9 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/HomeScreen/Homepage.dart';
-import 'package:flutter_app/screens/booking.dart';
-import 'package:flutter_app/screens/profilescreen.dart';
+import 'package:flutter_onboarding_ui/screens/HomeScreen/Homepage.dart';
+import 'package:flutter_onboarding_ui/screens/booking.dart';
+import 'package:flutter_onboarding_ui/screens/profilescreen.dart';
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 
 
