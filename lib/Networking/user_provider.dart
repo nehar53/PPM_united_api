@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/Data_Handling/screen1_data.dart';
-import 'package:flutter_app/Networking/service.dart';
+import 'package:flutter_onboarding_ui/Data_Handling/screen1_data.dart';
+import 'package:flutter_onboarding_ui/Networking/service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum Status { Authenticated, Authenticating, Unauthenticated }
