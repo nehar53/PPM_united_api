@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter_app/Data_Handling/screen1_data.dart';
+import 'package:flutter_onboarding_ui/Data_Handling/screen1_data.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
